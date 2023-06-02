@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "repositoy"
+    "url": "https://github.com/sanjeev-dhakjariwala/guruji-backend-test.git"
   },
   "keywords": [
     "Backend",
@@ -20,10 +20,12 @@
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.1.3",
     "express": "^4.18.2",
     "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.2.2"
   },
   "devDependencies": {
