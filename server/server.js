@@ -9,5 +9,5 @@ dotenv.config();
 const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
-    console.log(colors.blue(`APP IS LISTENING ON PORT ${PORT}`));
+  console.log(colors.blue(`APP IS LISTENING ON PORT ${PORT}`));
 });

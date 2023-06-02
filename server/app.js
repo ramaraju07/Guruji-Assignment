@@ -9,9 +9,10 @@ app.use(express.json({ limit: '50mb' }));
 app.get('/', (req, res) => {
   res.send({
     success: true,
-    message: 'APP IS WORKING FINE!!',
+    message: 'APP IS WORKING FINE!!'
   });
 });
+
 
 app.use(notFound);
 app.use(errorHandler);
