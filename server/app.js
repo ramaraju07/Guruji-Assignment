@@ -1,11 +1,13 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const cookieParser = require('cookie-parser');
 const { notFound, errorHandler } = require('../middlewares/error.middleware');
 const authRoute = require('../routes/authentication/authentication.route');
 const todoRoute = require('../routes/todo/todo.routes');
 
 app.use(cors());
+app.use(cookieParser());
 app.use(express.json({ limit: '50mb' }));
 
 app.get('/', (req, res) => {

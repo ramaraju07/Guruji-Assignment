@@ -58,7 +58,6 @@ const login = asyncHandler(async (req, res) => {
         isAdmin: findUserByEmail.isAdmin
       }
     });
-    
   } else {
     res.status(401);
     throw new Error(`Email or password in valid!`);

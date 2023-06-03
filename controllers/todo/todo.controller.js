@@ -1,9 +1,11 @@
 const asyncHandler = require('express-async-handler');
 const Task = require('../../model/Task');
+const User = require('../../model/User');
+const jwt = require('jsonwebtoken');
 
 const getTask = asyncHandler(async (req, res) => {
-  const task = await Task.find({});
-
+  const decoded = jwt.verify(req.cookies?.jwt, process.env.JWT_SECRET);
+  const task = await Task.find({ user: decoded.userId });
   if (task) {
     res.send({
       success: true,
@@ -18,10 +20,13 @@ const getTask = asyncHandler(async (req, res) => {
 const createTask = asyncHandler(async (req, res) => {
   try {
     const { taskName, description, status } = req.body;
+    const decoded = jwt.verify(req.cookies?.jwt, process.env.JWT_SECRET);
+    const user = await User.findById(decoded.userId).select('-password');
     const task = await Task.create({
       taskName,
       description,
-      status
+      status,
+      user
     });
 
     if (task) {

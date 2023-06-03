@@ -6,10 +6,11 @@ const {
   updateTask,
   deleteTask
 } = require('../../controllers/todo/todo.controller');
+const { protect, admin } = require('../../middlewares/auth.middleware');
 
-router.route('/getTask').get(getTask);
-router.route('/createTask').post(createTask);
-router.route('/updateTask/:id').put(updateTask);
-router.route('/deleteTask/:id').delete(deleteTask);
+router.route('/getTask').get(protect, getTask);
+router.route('/createTask').post(protect, createTask);
+router.route('/updateTask/:id').put(protect, updateTask);
+router.route('/deleteTask/:id').delete(protect, admin, deleteTask);
 
 module.exports = router;
