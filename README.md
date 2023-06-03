@@ -9,8 +9,8 @@ So all you have to do is
 ``` npm start ```
 
 One more important thing is that the admin feature requirement was there
-So only admin user is
-email: ``` sanjeevjha882@gmail.com ```
+So only admin user is <br>
+email: ``` sanjeevjha882@gmail.com ``` <br>
 password: ``` 123456 ```
-
+<br>
 So using only this user you will be able to delete the task
