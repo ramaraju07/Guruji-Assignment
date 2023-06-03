@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"sanjeevjha882@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"raw": "{\r\n    \"email\":\"sanjeevjha885@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24,9 +24,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}/api/authenticate/login",
+							"raw": "{{live}}/api/authenticate/login",
 							"host": [
-								"{{local}}"
+								"{{live}}"
 							],
 							"path": [
 								"api",
@@ -44,7 +44,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Sanjeev Jha\",\r\n    \"email\": \"sanjeevjha883@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Sanjeev Jha\",\r\n    \"email\": \"sanjeevjha885@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -52,9 +52,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}/api/authenticate/register",
+							"raw": "{{live}}/api/authenticate/register",
 							"host": [
-								"{{local}}"
+								"{{live}}"
 							],
 							"path": [
 								"api",
@@ -106,7 +106,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"taskName\": \"taskName4\",\r\n    \"description\": \"description4\",\r\n    \"status\": \"status4\"\r\n}",
+							"raw": "{\r\n    \"taskName\": \"taskName10\",\r\n    \"description\": \"description10\",\r\n    \"status\": \"status10\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -114,9 +114,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}/api/todo/createTask",
+							"raw": "{{live}}/api/todo/createTask",
 							"host": [
-								"{{local}}"
+								"{{live}}"
 							],
 							"path": [
 								"api",
@@ -243,6 +243,11 @@
 		{
 			"key": "local",
 			"value": "http://localhost:4000",
+			"type": "string"
+		},
+		{
+			"key": "live",
+			"value": "https://guruji-backend-test-production.up.railway.app",
 			"type": "string"
 		}
 	]
