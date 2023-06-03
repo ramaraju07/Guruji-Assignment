@@ -5,6 +5,7 @@ I have already included the .env file so that it is easy to run the project and 
 So all you have to do is that 
 
 ``` npm install ```
+<br>
 ``` npm start ```
 
 One more important thing is that the admin feature requirement was there
