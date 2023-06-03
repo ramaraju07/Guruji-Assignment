@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "d8e07717-34db-4d96-ab96-951d9b5751db",
+		"name": "Guruji Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16395905"
+	},
+	"item": [
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "/api/authenticate/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sanjeevjha882@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/authenticate/login",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"authenticate",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/authenticate/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sanjeev Jha\",\r\n    \"email\": \"sanjeevjha883@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/authenticate/register",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"authenticate",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "todo",
+			"item": [
+				{
+					"name": "/api/todo/getTask",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "cookie",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{local}}/api/todo/getTask",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"todo",
+								"getTask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/todo/createTask",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"taskName\": \"taskName4\",\r\n    \"description\": \"description4\",\r\n    \"status\": \"status4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/todo/createTask",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"todo",
+								"createTask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/todo/updateTask",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Put Test description\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/todo/updateTask/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"todo",
+								"updateTask",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "647aec778d4bc001e40f11f0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/todo/deleteTask",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/todo/deleteTask/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"todo",
+								"deleteTask",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "647b137d8163ed01d0ea9e31"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}",
+					"host": [
+						"{{local}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"// Extract the cookie value from the response",
+					"const jwtCookie = pm.cookies;",
+					"",
+					"// Store the cookie value as a variable",
+					"pm.environment.set('jwtCookie', jwtCookie);",
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "http://localhost:4000",
+			"type": "string"
+		}
+	]
+}
