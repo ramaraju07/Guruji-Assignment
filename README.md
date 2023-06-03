@@ -2,7 +2,7 @@
 
 I have already included the .env file so that it is easy to run the project and the postman collection is present in the postman folder.
 
-So all you have to do is that 
+So all you have to do is
 
 ``` npm install ```
 <br>
