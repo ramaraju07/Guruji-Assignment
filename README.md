@@ -14,3 +14,6 @@ email: ``` sanjeevjha882@gmail.com ``` <br>
 password: ``` 123456 ```
 <br>
 So using only this user you will be able to delete the task
+<br>
+In the about section you can find the hosted URL and in the postman collection I have included it so you can just change the path URL to live
+Basically there are two path live and local
